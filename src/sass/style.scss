@@ -9,6 +9,7 @@
 $white95: #f2f2f2;
 $white90: #e6e6e6;
 $white80: #cccccc;
+$white40: #404040;
 $white5: #0d0d0d;
 $whiteTransparent: rgba(13, 13, 13, .65);
 
@@ -26,8 +27,6 @@ $standardPadding: 1rem;
 html {
 	font-family: 'Open Sans', sans-serif;
 }
-
-img {vertical-align:bottom}
 
 ul {
 	list-style: none;
@@ -116,9 +115,37 @@ p, a, button {
 	text-align: center;
 }
 
+.return-top {
+	text-align: center;
+	text-transform: uppercase;
+	height: 0;
+	overflow: hidden;
+}
 
+.return-top:focus {
+	height: inherit;
+	padding: 1rem;
+}
 
 //  -- HEADER & NAVIGATION -- 
+
+#skip-header {
+	height: 0;
+	overflow: hidden;
+	text-transform: uppercase;
+	font-weight: 700;
+	text-align: center;
+	position: fixed;
+	top: 0;
+	z-index: 2;
+	width: 100%;
+	background-color: $white90;
+}
+
+#skip-header:focus {
+	height: inherit;
+	padding: 1rem;
+}
 
 #sitewide-header {
 	background-color: $white90;
@@ -132,24 +159,8 @@ p, a, button {
 	}
 }
 
-#skip-header {
-	height: 0;
-	overflow: hidden;
-	text-transform: uppercase;
-	font-weight: 700;
-	text-align: center;
-}
-
-#skip-header:focus {
-	height: inherit;
-	padding: 1rem;
-}
-
 #visable-navigation {
 	border-bottom: .1rem solid $white80;
-	.flex-container {
-		align-items: baseline;
-	}
 }
 
 #logo-container {
@@ -159,18 +170,28 @@ p, a, button {
 	}
 }
 
-#logo-container a, #toggle-navigation {
+#logo-container a, {
+	padding: 1.1rem 1rem;
+}
+
+#toggle-navigation {
 	padding: $standardPadding;
 }
 
+
 #navigation-list {
 	a {
-		padding: $standardPadding;
+		padding: 1.1rem 1rem;
 		border-bottom: .1rem solid $white80;
 	}
 }
 
 // -- MAIN CONTENT --
+
+html {
+	scroll-behavior: smooth;
+
+}
 
 h1, h2, h3, h4, h5, h6 {
 	text-align: center;
@@ -205,16 +226,22 @@ h1, h2, h3, h4, h5, h6 {
 		margin: 0 0 1rem 0;
 		border-bottom: .1rem solid $white80;
 	}
-	div {
+	.image-container {
 		text-align: center;
 		margin-bottom: 1rem;
+		img {
+			border-radius: 9rem;
+		}
 	}
-	img {
-		border-radius: 9rem;
+	.arrow-container {
+		margin-top: 3rem;
 	}
 	p {
-		line-height: 1.5rem;
-		margin-bottom: 1rem;
+		line-height: 1.5em;
+		margin-bottom: 2rem;
+	}
+	a {
+		display: inline;
 	}
 }
 
@@ -223,13 +250,13 @@ h1, h2, h3, h4, h5, h6 {
 	background-image: url('../images/language-image.jpg');
 	background-size: cover;
 	color: $white95;
+	text-align: center;
 	h3 {
 		padding-bottom: .5rem;
 		margin-bottom: 1rem;
-		border-bottom: .1rem solid $white80;
+		border-bottom: .1rem solid $white40;
 	}
-	li {
-		text-align: center;
+	.grid-item {
 		margin-bottom: 1rem;
 	}
 	.transparent-background {
@@ -242,40 +269,61 @@ h1, h2, h3, h4, h5, h6 {
 		margin-top: 1rem;
 		
 	}
+	a {
+		margin-top: 2rem;
+	}
+}
+
+#my-project {
+	padding: 4rem 0;
 }
 
 //  -- FORM STYLE --
 
-form {
-	padding: 1rem;
+#contact-me {
+	padding: 4rem 1rem;
+	form {
+		border: .1rem solid $white80;
+		box-shadow: .4rem .4rem .4rem $white90;
+		padding: 1rem;
+		label {
+			margin: .5rem 0;
+		}
+		label, input {
+			display: block;
+		}
+		input, textarea, select {
+			width: 100%;
+		}
+		.submit-form {
+			margin-top: 1rem;
+		}
+	}
 }
 
-label {
-	margin: .5rem 0;
-}
 
-label, form input {
-	display: block;
-}
-form input, textarea {
-	width: 100%;
-}
 
 // -- FOOTER STYLES --
 
 #sitewide-footer {
 	background-color: $white90;
 	text-align: center;
-	padding: 1rem 0;
+	ul {
+		border-top: .1rem solid $white80;
+	}
 	li {
 		border-bottom: .1rem solid $white80;
 		a {
 			padding: 1rem 0;
 		}
+		a:hover, a:focus {
+			font-weight: 700;
+			background-color: $white95;
+		}
 	}
 }
 
-// -- 855PX MEDIA QUERY -- 
+// -- 768PX MEDIA QUERY -- 
 
 @media only screen and (min-width: 768px) {
 
@@ -284,7 +332,7 @@ form input, textarea {
 	.background-image {
 		background-attachment: fixed;
 	}
-
+ 
 	.desktop-activated {
 		display: block;
 	}
@@ -296,6 +344,70 @@ form input, textarea {
 	#home-section {
 		background-size: 768px 606px;
 		background-image: url('../images/kjek-logo.png');
+	}
+
+	#sitewide-header {
+		display: flex;
+	}
+
+	#visable-navigation {
+		display: flex;
+		flex-grow: 1;
+	}
+
+	#navigation-list {
+		display: flex;
+	}
+	
+	.grid-container {
+		display: grid;
+		grid-template-columns: auto auto;
+		grid-gap: 1rem;
+	}
+
+	#sitewide-header {
+		border-bottom: .1rem solid $white80;
+	}
+
+	#visable-navigation {
+		border-bottom: none;
+	}
+
+	#navigation-list {
+		a {
+			border-bottom: none;
+		}
+	}
+}
+
+@media only screen and (min-width: 1025px) {
+	.grid-container {
+		margin: 4rem 0;
+		grid-template-columns: auto auto auto;
+		grid-gap: 4rem;
+	}
+	#about-content {
+		display: flex;
+		align-items: center;
+	}	
+
+	#about-me {
+		.image-container {
+			margin: 0 1rem 0 0;
+		}
+		p {
+			margin-bottom: 0;
+		}
+		.arrow-container {
+			margin-top: 4rem;
+		}
+	}
+}
+
+@media only screen and (min-width: 1500px) {
+	.grid-container {
+		margin: 6rem 0;
+		grid-template-columns: auto auto auto auto auto auto;
 	}
 
 }
