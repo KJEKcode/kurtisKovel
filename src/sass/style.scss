@@ -220,30 +220,28 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #about-me {
-	padding: 4rem 1rem;
-	background-color: $white95;
+	padding: 4rem 0;
+	margin: 0 1rem;
 	h2 {
-		margin: 0 0 1rem 0;
+		padding-bottom: .4rem;
+		margin-bottom: 2rem;
 		border-bottom: .1rem solid $white80;
 	}
-	.image-container {
-		text-align: center;
-		margin-bottom: 1rem;
-		img {
-			border-radius: 9rem;
-		}
-	}
-	.arrow-container {
-		margin-top: 3rem;
+	.profile-picture {
+		float: left;
+		shape-outside: circle(50%);
+		width: 150px;
+		border-radius: 5rem;
+		margin-right: 1rem;
 	}
 	p {
-		line-height: 1.5em;
-		margin-bottom: 2rem;
+		line-height: 1.75rem;
 	}
-	a {
-		display: inline;
+	.arrow-container {
+		margin-top: 2rem;
 	}
 }
+
 
 #language-tool {
 	padding: 4rem 1rem;
@@ -252,11 +250,14 @@ h1, h2, h3, h4, h5, h6 {
 	color: $white95;
 	text-align: center;
 	h3 {
-		padding-bottom: .5rem;
-		margin-bottom: 1rem;
+		padding-bottom: .4rem;
+		margin-bottom: 2rem;
 		border-bottom: .1rem solid $white40;
 	}
-	.grid-item {
+	.flex-container {
+		flex-direction: column;
+	}
+	.flex-item {
 		margin-bottom: 1rem;
 	}
 	.transparent-background {
@@ -275,7 +276,42 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #my-project {
-	padding: 4rem 0;
+	padding: 4rem 1rem;
+	border-bottom: .1rem solid $white80;
+	h4 {
+		padding-bottom: .4rem;
+		margin-bottom: 2rem;
+		border-bottom: .1rem solid $white80;
+	}
+	.project-container {
+		text-align: center;
+		img {
+			width: 75%;
+		}
+		figcaption {
+			font-weight: bold;
+		}
+	}
+	.demo-link {
+		background-color: $white90;
+		display: inline-block;
+		padding: 1rem;
+		margin: .5rem 0;
+		border-radius: 2rem;
+		border: .1rem solid $white80;
+	}
+	.demo-link:hover {
+		background-color: $white95;
+	}
+	.github-link {
+		border: .1rem solid $white80;
+		display: inline-block;
+		border-radius: 2rem;
+		padding: 1rem;
+	}
+	.project-divider {
+		padding-bottom: 2rem;
+	}
 }
 
 //  -- FORM STYLE --
@@ -285,7 +321,12 @@ h1, h2, h3, h4, h5, h6 {
 	form {
 		border: .1rem solid $white80;
 		box-shadow: .4rem .4rem .4rem $white90;
+		-webkit-box-shadow: .4rem .4rem .4rem $white90;
+		-moz-box-shadow: .4rem .4rem .4rem $white90;
 		padding: 1rem;
+		.flex-container {
+			flex-direction: column;
+		}
 		label {
 			margin: .5rem 0;
 		}
@@ -297,11 +338,15 @@ h1, h2, h3, h4, h5, h6 {
 		}
 		.submit-form {
 			margin-top: 1rem;
+			background-color: $white90;
+			border: .1rem solid $white80;
+			border-radius: 2rem;
+			padding: 1rem;
+			width: 25%;
+
 		}
 	}
 }
-
-
 
 // -- FOOTER STYLES --
 
@@ -343,7 +388,6 @@ h1, h2, h3, h4, h5, h6 {
 	
 	#home-section {
 		background-size: 768px 606px;
-		background-image: url('../images/kjek-logo.png');
 	}
 
 	#sitewide-header {
@@ -357,12 +401,6 @@ h1, h2, h3, h4, h5, h6 {
 
 	#navigation-list {
 		display: flex;
-	}
-	
-	.grid-container {
-		display: grid;
-		grid-template-columns: auto auto;
-		grid-gap: 1rem;
 	}
 
 	#sitewide-header {
@@ -378,36 +416,80 @@ h1, h2, h3, h4, h5, h6 {
 			border-bottom: none;
 		}
 	}
+	#about-me {
+		
+		#about-content {
+			width: 55%;
+			margin: 4rem auto;
+		}
+		.profile-picture {
+			width: 190px;
+			border-radius: 8rem;
+		}
+		p {
+			text-align: justify;
+		}
+	}
+
+	#language-tool {
+		.flex-container {
+			flex-direction: row;
+			flex-wrap: wrap;
+			.sub-container {
+				width: 50%; 
+			}
+			.flex-item {
+				margin-bottom: 2rem;
+			}
+		}
+	}
+
+	#my-project {
+		padding: 4rem 0;
+	.project-container {
+		display: flex;
+		
+		img {
+			width: 95%;
+		}
+	}
+}
+
+#contact-me {
+	
+	form {
+		.flex-container {
+			flex-direction: row;
+		div {
+			width: 50%;
+		}
+		.form-left {
+			padding-right: 1rem;
+		}
+		.form-right {
+			padding-left: 1rem;
+		}
+		}
+
+	}
+}
 }
 
 @media only screen and (min-width: 1025px) {
-	.grid-container {
-		margin: 4rem 0;
-		grid-template-columns: auto auto auto;
-		grid-gap: 4rem;
-	}
-	#about-content {
-		display: flex;
-		align-items: center;
-	}	
-
-	#about-me {
-		.image-container {
-			margin: 0 1rem 0 0;
-		}
-		p {
-			margin-bottom: 0;
-		}
-		.arrow-container {
-			margin-top: 4rem;
+	#language-tool {
+		.flex-container {
+			.sub-container {
+				width: 25%; 
+			}
+			.flex-item {
+				margin-bottom: 3rem;
+			}
 		}
 	}
-}
 
-@media only screen and (min-width: 1500px) {
-	.grid-container {
-		margin: 6rem 0;
-		grid-template-columns: auto auto auto auto auto auto;
+	#my-project .project-container {
+		img {
+			width: 75%;
+		}
 	}
-
 }

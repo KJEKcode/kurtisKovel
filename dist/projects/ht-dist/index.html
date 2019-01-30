@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Horizontal Template</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body>
+    <a id="skip-header" href="#main-content">skip to main content</a>
+    <header id="sitewide-header">
+        <ul id="visible-navigation">
+            <li id="logo-container">
+                <a href="index.html"><img src="images/logo-icon.png" alt="horizontal template"><span id="title-span" aria-hidden="true">Horizontal Template</span></a>
+            </li>
+          <li id="control-container"><button id="menu-button" aria-expanded="false" aria-controls="toggled-navigation">menu</button></li>
+        </ul>
+        <nav id="navigation-container">
+          <ul id="toggled-navigation" aria-hidden="true" aria-labelledby="menu-button">
+            <li><a href="#main-content"><img src="images/home-icon.png" alt="home icon"><span>Home</span></a></li>
+            <li><a href="#dog-section"><img src="images/paw-icon.png" alt="dog icon"><span>Dogs</span></a></li>
+            <li><a href="#car-section"><img src="images/car-icon.png" alt="car icon"><span>Cars</span></a></li>
+            <li><a href="#sport-section"><img src="images/ball-icon.png" alt="sport icon"><span>Sports</span></a></li>
+          </ul>
+        </nav>
+    </header>
+    <main id="main-content">
+        <section class="gallery-section" id="dog-section">
+            <figure>
+                <img src="images/puppy-one.jpeg" alt="photo of puppy playing outside">
+                <figcaption>Puppy in Training</figcaption>
+            </figure>
+            <figure>
+                <img src="images/puppy-two.jpeg" alt="photo of playing outside">
+                <figcaption>Puppy Playing Outside</figcaption>
+            </figure>
+            <figure>
+                <img src="images/puppy-three.jpeg" alt="photo of puppy sitting outside">
+                <figcaption>Puppy Sitting in the Grass</figcaption>
+            </figure>
+            <figure>
+                <img src="images/puppy-four.jpeg" alt="photo of two puppies sitting outside">
+                <figcaption>Two Puppies Socializing</figcaption>
+            </figure>
+            <figure>
+                <img src="images/puppy-five.jpeg" alt="photo of puppy sitting inside">
+                <figcaption>Puppy Sitting on the Carpet</figcaption>
+            </figure>
+            <figure>
+                <img src="images/puppy-six.jpeg" alt="photo of puppy sleeping">
+                <figcaption>Puppy Taking a Nap</figcaption>
+            </figure>
+        </section>
+        <section class="gallery-section" id="car-section">
+            <figure>
+                <img src="images/mustang-one.jpeg" alt="photo of the front of a classic mustang">
+                <figcaption>Front of Classic Mustang</figcaption>
+            </figure>
+            <figure>
+                <img src="images/mustang-two.jpeg" alt="photo of the wheel on a classic mustang">
+                <figcaption>Wheel of Classic Mustang</figcaption>
+            </figure>
+            <figure>
+                <img src="images/mustang-three.jpeg" alt="photo of the classic mustang logo">
+                <figcaption>Classic Mustang Emblem</figcaption>
+            </figure>
+             <figure>
+                <img src="images/mustang-four.jpeg" alt="photo of a 2005 to 2009 mustang shelby">
+                <figcaption>Font of Shelby Mustang</figcaption>
+            </figure>
+            <figure>
+                <img src="images/mustang-five.jpeg" alt="photo of a new mustang headlight">
+                <figcaption>New Mustang Headlight</figcaption>
+            </figure>
+            <figure>
+                <img src="images/mustang-six.jpeg" alt="photo of the new mustang front end">
+                <figcaption>Front of New Mustang</figcaption>
+            </figure>
+        </section>
+        <section class="gallery-section" id="sport-section">
+            <figure>
+                <img src="images/sport-one.jpeg" alt="photo of a soccer ball in a stadium">
+                <figcaption>Soccer Stadium</figcaption>
+            </figure>
+            <figure>
+                <img src="images/sport-two.jpeg" alt="photo of a soccer ball on a field">
+                <figcaption>Soccer Field</figcaption>
+            </figure>
+            <figure>
+                <img src="images/sport-three.jpeg" alt="photo of a golf ball close to the hole">
+                <figcaption>Golf Ball Close to Pin</figcaption>
+            </figure>
+            <figure>
+                <img src="images/sport-four.jpeg" alt="photo of a basketball going through the net">
+                <figcaption>Basketball and Goal</figcaption>
+            </figure>
+            <figure>
+                <img src="images/sport-five.jpg" alt="photo of a football on the field">
+                <figcaption>Football on Field</figcaption>
+            </figure>
+            <figure>
+                <img src="images/sport-six.jpeg" alt="photo of snowboards and skis">
+                <figcaption>Snowboards and Skis</figcaption>
+            </figure>
+        </section>
+    </main>
+    <footer id="sitewide-footer">
+    <ul>
+      <li><a href="#main-content">Home</a></li>
+            <li><a href="#dog-section">Dogs</a></li>
+            <li><a href="#car-section">Cars</a></li>
+            <li><a href="#sport-section">Sports</a></li>
+    </ul>
+    </footer>
+    <a href="#main-content" id="top-button"><img src="images/top-button.png" alt="back to top"></a>
+    <script src="js/compiled.min.js"></script>
+</body>
+</html>

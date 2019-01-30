@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Vertical Template</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body>
+  <a id="skip-header" href="#main-content">skip to main content</a>
+  <header id="sitewide-header">
+    <ul id="visible-navigation">
+      <li id="logo-container"><a href="#">vertical template</a></li>
+      <li id="control-container"><button id="menu-button" aria-expanded="false" aria-controls="toggled-navigation">menu</button></li>
+    </ul>
+    <nav id="navigation-container">
+      <ul id="toggled-navigation" aria-hidden="true" aria-labelledby="menu-button">
+        <li><a href="#home-section">home section</a></li>
+        <li><a href="#section-two">section two</a></li>
+        <li>
+          <button id="dropdown1-button" aria-expanded="false" aria-controls="dropdown-one">three &ndash; five</button>
+          <ul id="dropdown-one" aria-hidden="true" aria-labelledby="dropdown1-button">
+            <li><a href="#section-three">section three</a></li>
+            <li><a href="#section-four">section four</a></li>
+            <li><a href="#section-five">section five</a></li>
+          </ul>
+        </li>
+        <li><a href="#section-six">section six</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main id="main-content">
+  <section id="home-section" class="content-section">
+      <h1>Home Section</h1>
+      <span>home section information</span>
+      <div class="arrow-container">
+        <a href="#section-two" class="next-section"><img src="images/next-arrow.png" alt="go to section two"></a>
+    </div>
+  </section>
+  <section id="section-two" class="content-section">
+    <header class="section-header">
+      <h2>Section Two</h2>
+      <span>section information</span>
+    </header>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis recusandae ex praesentium numquam asperiores iusto eaque sapiente. Quod, ut sed. Obcaecati doloremque numquam quasi dolorum!</p>
+    <div class="arrow-container">
+      <a href="#section-three" class="next-section"><img src="images/next-arrow.png" alt="go to section three"></a>
+      <a href="#home-section" class="top-link">back to top</a>
+    </div>
+  </section>
+  <section id="section-three" class="content-section">
+    <header class="section-header">
+      <h3>Section Three</h3>
+      <span>section information</span>
+    </header>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis recusandae ex praesentium numquam asperiores iusto eaque sapiente. Quod, ut sed. Obcaecati doloremque numquam quasi dolorum!</p>
+    <div class="arrow-container">
+      <a href="#section-four" class="next-section"><img src="images/next-arrow.png" alt="go to section four"></a>
+      <a href="#home-section" class="top-link">back to top</a>
+    </div>
+  </section>
+  
+  <section id="section-four" class="content-section">
+    <header class="section-header">
+      <h4>Section Four</h4>
+      <span>section information</span>
+    </header>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis recusandae ex praesentium numquam asperiores iusto eaque sapiente. Quod, ut sed. Obcaecati doloremque numquam quasi dolorum!</p>
+    <div class="arrow-container">
+      <a href="#section-five" class="next-section"><img src="images/next-arrow.png" alt="go to section five"></a>
+      <a href="#home-section" class="top-link">back to top</a>
+    </div>
+  </section>
+  
+  <section id="section-five" class="content-section">
+    <header class="section-header">
+      <h5>Section Five</h5>
+      <span>section information</span>
+    </header>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis recusandae ex praesentium numquam asperiores iusto eaque sapiente. Quod, ut sed. Obcaecati doloremque numquam quasi dolorum!</p>
+    <div class="arrow-container">
+      <a href="#section-six" class="next-section"><img src="images/next-arrow.png" alt="go to section six"></a>
+      <a href="#home-section" class="top-link">back to top</a>
+    </div>
+  </section>
+  
+  <section id="section-six" class="content-section">
+    <header class="section-header">
+      <h6>Section Six</h6>
+      <span>section information</span>
+    </header>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis recusandae ex praesentium numquam asperiores iusto eaque sapiente. Quod, ut sed. Obcaecati doloremque numquam quasi dolorum!</p>
+  </section>
+  </main>
+  <footer id="sitewide-footer">
+    <ul>
+      <li><a href="#home-section">home section</a></li>
+      <li><a href="#section-two">section two</a></li>
+      <li><a href="#section-three">section three</a></li>
+      <li><a href="#section-four">section four</a></li>
+      <li><a href="#section-five">section five</a></li>
+      <li><a href="#section-six">section six</a></li>
+    </ul>
+  </footer>
+  <a href="#home-section" id="top-button"><img src="images/top-button.png" alt="back to top"></a>
+    <script src="js/compiled.min.js"></script>
+</body>
+</html>

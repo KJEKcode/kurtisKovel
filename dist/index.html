@@ -5,8 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Kurtis Kovel</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.min.css">
+    <script src='https://www.google.com/recaptcha/api.js'></script>
 </head>
 <body>
     <a href="#main-content" id="skip-header">skip to main content</a>
@@ -39,9 +42,7 @@
 		<section id="about-me">
 			<h2>About Me</h2>
             <div id="about-content">
-                <div class="image-container">
-                    <img src="images/kurtis-kovel.jpg" alt="Photo of Kurtis Kovel">
-                </div>
+                <img class="profile-picture" src="images/kurtis-kovel.jpg" alt="Photo of Kurtis Kovel">
     			<p>I was born in 1989 in Charlotte North Carolina. I currently live east of the city in a small town called Midland with my girlfriend Heather and our two dogs Jango and Riley. When I am not coding, I am typically gaming with friends or playing sports such as football, basketball, soccer, golf and snowboarding.  I attended ITT Technical Institute where I received an associated degree in Graphic Design.  Carolina Digital Photo, one of my freelance web development clients became my first industry related position as a Photoshop expert.  The experience I gained there landed me a role in the E-Commerce Department at Belk as a Product Image Producer.  After a year I was promoted to the Department Landing Page team where we used HTML and CSS to update numerous pages on the website.  After parting ways with Belk I have been working with my own clients to improve their knowledge of HTML, CSS, compliance and best practices.</p>
             </div>
 			<div class="arrow-container"><a href="#language-tool"><img src="images/scroll-arrow-dark.png" alt="go to lauguages and tools section"></a></div>
@@ -49,105 +50,149 @@
         <a class="return-top" href="#home-section">back to top</a>
 		<section id="language-tool" class="background-image">
 			<h3>Languages &amp; Tools</h3>
-			<div class="grid-container">
-				<div class="grid-item">
-                    <div class="transparent-background">
-						<img src="images/html5-logo.png" alt="HTML5 logo">
-						<p>HTML5</p>
-					</div>
+			<div class="flex-container">
+                <div class="sub-container">
+    				<div class="flex-item">
+                        <div class="transparent-background">
+    						<img src="images/html5-logo.png" alt="HTML5 logo">
+    						<p>HTML5</p>
+    					</div>
+                    </div>
+    				<div class="flex-item">
+                        <div class="transparent-background">
+    						<img src="images/css3-logo.png" alt="CSS3 logo">
+    						<p>CSS3</p>
+    					</div>
+                    </div>
+    				<div class="flex-item">
+                        <div class="transparent-background">
+    						<img src="images/javascript-logo.png" alt="JavaScript logo">
+    						<p>JavaScript</p>
+    					</div>
+                    </div>
                 </div>
-				<div class="grid-item">
-                    <div class="transparent-background">
-						<img src="images/css3-logo.png" alt="CSS3 logo">
-						<p>CSS3</p>
-					</div>
+                <div class="sub-container">
+    				<div class="flex-item">
+                        <div class="transparent-background">
+    						<img src="images/w3c-logo.png" alt="W3C logo">
+    						<p>WCAG 2.0</p>
+    					</div>
+                    </div>
+    				<div class="flex-item">
+                        <div class="transparent-background">
+    						<img src="images/w3c-logo.png" alt="W3C logo">
+    						<p>WAI&ndash;ARIA</p>
+    					</div>
+                    </div>
+    				<div class="flex-item">
+                        <div class="transparent-background">
+    						<img src="images/sublime-logo.png" alt="Sublime Text 3 logo">
+    						<p>Sublime Text 3</p>
+    					</div>
+                    </div>
                 </div>
-				<div class="grid-item">
-                    <div class="transparent-background">
-						<img src="images/javascript-logo.png" alt="JavaScript logo">
-						<p>JavaScript</p>
-					</div>
+                <div class="sub-container">
+    				<div class="flex-item">
+                        <div class="transparent-background">
+    						<img src="images/sass-logo.png" alt="Sass logo">
+    						<p>Sass</p>
+    					</div>
+                    </div>
+    				<div class="flex-item">
+                        <div class="transparent-background">
+    						<img src="images/gulp-logo.png" alt="Gulp logo">
+    						<p>Gulp</p>
+    					</div>
+                    </div>
+    				<div class="flex-item">
+                        <div class="transparent-background">
+    						<img src="images/git-logo.png" alt="Git logo">
+    						<p>Git</p>
+    					</div>
+                    </div>
                 </div>
-				<div class="grid-item">
-                    <div class="transparent-background">
-						<img src="images/w3c-logo.png" alt="W3C logo">
-						<p>WCAG 2.0</p>
-					</div>
-                </div>
-				<div class="grid-item">
-                    <div class="transparent-background">
-						<img src="images/w3c-logo.png" alt="W3C logo">
-						<p>WAI&ndash;ARIA</p>
-					</div>
-                </div>
-				<div class="grid-item">
-                    <div class="transparent-background">
-						<img src="images/sublime-logo.png" alt="Sublime Text 3 logo">
-						<p>Sublime Text 3</p>
-					</div>
-                </div>
-				<div class="grid-item">
-                    <div class="transparent-background">
-						<img src="images/sass-logo.png" alt="Sass logo">
-						<p>Sass</p>
-					</div>
-                </div>
-				<div class="grid-item">
-                    <div class="transparent-background">
-						<img src="images/gulp-logo.png" alt="Gulp logo">
-						<p>Gulp</p>
-					</div>
-                </div>
-				<div class="grid-item">
-                    <div class="transparent-background">
-						<img src="images/git-logo.png" alt="Git logo">
-						<p>Git</p>
-					</div>
-                </div>
-				<div class="grid-item">
-                    <div class="transparent-background">
-						<img src="images/photoshop-logo.png" alt="Photoshop logo">
-						<p>Photoshop</p>
-					</div>
-                </div>
-				<div class="grid-item">
-                    <div class="transparent-background">
-						<img src="images/illustrator-logo.png" alt="Illustrator logo">
-						<p>Illustrator</p>
-					</div>
-                </div>
-				<div class="grid-item">
-                    <div class="transparent-background">
-						<img src="images/xd-logo.png" alt="Adobe Xd logo">
-						<p>Adobe Xd</p>
-					</div>
-                </div>						
+                <div class="sub-container">
+    				<div class="flex-item">
+                        <div class="transparent-background">
+    						<img src="images/photoshop-logo.png" alt="Photoshop logo">
+    						<p>Photoshop</p>
+    					</div>
+                    </div>
+    				<div class="flex-item">
+                        <div class="transparent-background">
+    						<img src="images/illustrator-logo.png" alt="Illustrator logo">
+    						<p>Illustrator</p>
+    					</div>
+                    </div>
+    				<div class="flex-item">
+                        <div class="transparent-background">
+    						<img src="images/xd-logo.png" alt="Adobe Xd logo">
+    						<p>Adobe Xd</p>
+    					</div>
+                    </div>		
+                </div>				
             </div>
             <a href="#my-project"><img src="images/scroll-arrow-light.png" alt="go to my projects section"></a>
 		</section>
         <a class="return-top" href="#home-section">back to top</a>
 		<section id="my-project">
 			<h4>My Projects</h4>
+            <div class="project-container">
+                <div class="project-divider">
+                    <figure>
+                        <img class="project-image" src="images/vertical-project.png" alt="image of responsive vertical template project">
+                        <figcaption>Vertical Template</figcaption>
+                    </figure>
+                    
+                        <a href="projects/vt-dist/index.html" class="demo-link" target="_blank">View Live Demo</a>
+                        <a href="http://github.com/KJEKcode/verticalTemplate" class="github-link" target="_blank">Github Download</a>
+                    
+                </div>
+                <div class="project-divider">
+                    <figure>
+                        <img class="project-image" src="images/horizontal-project.png" alt="image of responsive horizontal template project">
+                        <figcaption>Horizontal Template</figcaption>
+                    </figure>
+                    
+                        <a href="projects/ht-dist/index.html" class="demo-link" target="_blank">View Live Demo</a>
+                        <a href="http://github.com/KJEKcode/horizontalTemplate" class="github-link" target="_blank">Github Download</a>
+                    
+                </div>
+            </div>
             <div class="arrow-container"><a href="#contact-me"><img src="images/scroll-arrow-dark.png" alt="go to contact me form"></a></div>
 		</section>
         <a class="return-top" href="#home-section">back to top</a>
         <section id="contact-me">
         <h5>Contact Me</h5>
-        <form action="post" action="" role="form">
-            <label for="firstname">First Name:</label>
-            <input type="text" name="firstname">
-            <label for="lastname">Last Name:</label>
-            <input type="text" name="lastname">
-            <label for="companyname">Company Name:</label>
-            <input type="text" name="companyname">
-            <label for="reason">I Would Like You to:</label>
-            <select name="reason">
-                <option value="website">Build a Website for My Company </option>
-                <option value="hire">Come Work for Our Company</option>
-            </select>
+        <form action="post" action="send_form_email.php" role="form">
+            <div class="flex-container">
+                <div class="form-left">
+                    <label for="firstname">First Name:</label>
+                    <input type="text" name="firstname">
+                </div>
+                <div class="form-right">
+                    <label for="lastname">Last Name:</label>
+                    <input type="text" name="lastname">
+                </div>
+            </div>
+            <div class="flex-container">
+                <div class="form-left">
+                    <label for="email">Email Address:</label>
+                    <input type="text" name="email">
+                </div>
+                <div class="form-right">
+                    <label for="reason">I Would Like You to:</label>
+                    <select name="reason">
+                        <option value="website">Build a Website for My Company </option>
+                        <option value="hire">Come Work for Our Company</option>
+                    </select>
+                </div>
+            </div>
             <label for="message">Message:</label>
             <textarea name="message" rows="10" cols="30"></textarea><br>
+            <div class="g-recaptcha" data-sitekey="6Lc6u40UAAAAACchL8gZFQxxwG9ijSDxaBH3R0DL"></div>
             <input class="submit-form" type="submit">
+
         </form>
     </section>
 	</main>
