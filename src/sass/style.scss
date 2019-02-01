@@ -276,6 +276,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #my-project {
+	background-color: $white90;
 	padding: 4rem 1rem;
 	border-bottom: .1rem solid $white80;
 	h4 {
@@ -293,7 +294,7 @@ h1, h2, h3, h4, h5, h6 {
 		}
 	}
 	.demo-link {
-		background-color: $white90;
+		background-color: $white95;
 		display: inline-block;
 		padding: 1rem;
 		margin: .5rem 0;
@@ -301,13 +302,19 @@ h1, h2, h3, h4, h5, h6 {
 		border: .1rem solid $white80;
 	}
 	.demo-link:hover {
-		background-color: $white95;
+		background-color: #fff;
+		text-decoration: underline;
+
 	}
 	.github-link {
 		border: .1rem solid $white80;
 		display: inline-block;
 		border-radius: 2rem;
 		padding: 1rem;
+	}
+	.github-link:hover {
+		background-color: $white95;
+		text-decoration: underline;
 	}
 	.project-divider {
 		padding-bottom: 2rem;

@@ -1,54 +1,83 @@
+// -- VARIABLES --
+const getNavigationList = () => {
+    return document.getElementById('navigation-list');
+}
+const getWindowWidth = () => {
+    return window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+}
+
+const getSitewideHeader = () => {
+    return document.getElementById('sitewide-header');
+}
+
+const getHeaderAnchors = () => {
+    return getSitewideHeader().getElementsByTagName('a');
+}
+
+const getHeaderButtons = () => {
+    return getSitewideHeader().getElementsByTagName('button');
+}
+
+const getMenuButton = () => {
+    return document.getElementById('toggle-navigation');
+}
+
+// -- START WINDOW LOAD --
 window.onload = windowLoaded;
-window.onresize = windowResized;
 
 function windowLoaded() {
-    if (window.innerWidth >= 768) {
-        var navigationList = document.getElementById('navigation-list');
-        navigationList.setAttribute('aria-hidden', 'false');
-    }
-    var sitewideHeader = document.getElementById('sitewide-header'), 
-    headerLinks = sitewideHeader.getElementsByTagName('a');
-    sitewideHeader.addEventListener('click', toggleControlled);
-    for (var i = headerLinks.length - 1; i >= 0; i--) {
-        headerLinks[i].addEventListener('click', closeMenu);
+    if (getWindowWidth() >= 768) {
+        getNavigationList().setAttribute('aria-hidden', 'false');
     }
 }
+
+// -- START WINDOW RESIZE
+window.onresize = windowResized;
 
 function windowResized() {
-    var navigationList = document.getElementById('navigation-list');
-    if (window.innerWidth >= 768) {
-        navigationList.setAttribute('aria-hidden', 'false');
+    if (getWindowWidth() >= 768) {
+        getNavigationList().setAttribute('aria-hidden', 'false');
     } else {
-        navigationList.setAttribute('aria-hidden', 'true');
+        getNavigationList().setAttribute('aria-hidden', 'true');
     }
 }
 
-function toggleControlled(e) {
-    if (e.target && e.target.nodeName == "BUTTON") {
-        var clickedButton = e.target, 
-        ariaControls = clickedButton.getAttribute('aria-controls'), 
-        ariaExpanded = clickedButton.getAttribute('aria-expanded'), 
-        controlledAria = document.getElementById(ariaControls),
-        ariaHidden = controlledAria.getAttribute('aria-hidden');
-        if (ariaHidden === 'true') {
-          controlledAria.setAttribute('aria-hidden', 'false');
-          clickedButton.setAttribute('aria-expanded', 'true');
-        } else {
-          controlledAria.setAttribute('aria-hidden', 'true');
-          clickedButton.setAttribute('aria-expanded', 'false');
-        }
-    }
+// --START ANCHOR CLICK -- 
+for (let i = getHeaderAnchors().length - 1; i >= 0; i--) {
+    getHeaderAnchors()[i].addEventListener('click', closeMenu);
 }
 
 function closeMenu() {
-    if (window.innerWidth <= 767) {
-        var navigationList = document.getElementById('navigation-list'),
-        menuButton = document.getElementById('toggle-navigation'),
-        ariaHidden = navigationList.getAttribute('aria-hidden'),
-        ariaExpanded = menuButton.getAttribute('aria-expanded');
+    if (getWindowWidth() <= 767) {
+        let ariaHidden = getNavigationList().getAttribute('aria-hidden'),
+        ariaExpanded = getMenuButton().getAttribute('aria-expanded');
         if (ariaHidden === 'false') {
-            navigationList.setAttribute('aria-hidden', 'true');
-            menuButton.setAttribute('aria-expanded', 'false');
+            getNavigationList().setAttribute('aria-hidden', 'true');
+            getMenuButton().setAttribute('aria-expanded', 'false');
         }
     }
 }
+
+// -- START BUTTON CLICK --
+for (var i = getHeaderButtons().length - 1; i >= 0; i--) {
+    getHeaderButtons()[i].addEventListener('click', toggleControlled);
+}
+
+const toggleAria = (target) => {
+    let ariaControls = target.getAttribute('aria-controls'),
+    controlledAria = document.getElementById(ariaControls),
+    ariaHidden = controlledAria.getAttribute('aria-hidden');
+    if (ariaHidden === 'true') {
+        controlledAria.setAttribute('aria-hidden', 'false');
+        target.setAttribute('aria-expanded', 'true');
+    } else {
+        controlledAria.setAttribute('aria-hidden', 'true');
+        target.setAttribute('aria-expanded', 'false');
+    }
+}
+
+function toggleControlled({ target }) {
+    toggleAria(target);
+}
+
+
