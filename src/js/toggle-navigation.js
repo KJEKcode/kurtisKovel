@@ -32,7 +32,7 @@ function windowLoaded() {
 }
 
 // -- START WINDOW RESIZE
-window.onresize = windowResized;
+window.addEventListener('resize', debounce(windowResized), 75);
 
 function windowResized() {
     if (getWindowWidth() >= 768) {
@@ -80,4 +80,23 @@ function toggleControlled({ target }) {
     toggleAria(target);
 }
 
+function debounce(func, wait, immediate) {
+    let timeout;
+    return function() {
+        let context = this,
+            args = arguments;
+        let later = function() {
+            timeout = null;
+            if ( !immediate ) {
+                func.apply(context, args);
+            }
+        };
+        let callNow = immediate && !timeout;
+        clearTimeout(timeout);
+        timeout = setTimeout(later, wait || 100);
+        if ( callNow ) { 
+            func.apply(context, args);
+        }
+    };
+};
 
